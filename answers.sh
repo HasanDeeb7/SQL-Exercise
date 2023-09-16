@@ -1,21 +1,24 @@
-CREATE TABLE Graduates (
-  ID SERIAL NOT NULL PRIMARY KEY,
-  Name TEXT NOT NULL UNIQUE,
-  Age INTEGER,
-  Gender TEXT,
-  Points INTEGER,
-  Graduation DATE
-);
+SELECT * 
+FROM students
 
-INSERT INTO Graduates
-SELECT *, '2000' FROM students
-WHERE name = 'Layal' 
+SELECT * 
+FROM students 
+WHERE Age > 30
 
+SELECT name, Age 
+FROM students 
+WHERE Age = 30 AND Gender = 'F'
 
-DELETE FROM students WHERE name = 'Layal'
+INSERT INTO students 
+VALUES (10, 'HDeeb', 22, 'M', 170)
 
+UPDATE students
+SET Points = Points + 100
+WHERE name = 'Basma'
 
-
+UPDATE students
+SET Points = Points - 100
+WHERE name = 'Alex'
 
 
 
