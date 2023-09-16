@@ -1,26 +1,18 @@
+CREATE TABLE Graduates (
+  ID SERIAL NOT NULL PRIMARY KEY,
+  Name TEXT NOT NULL UNIQUE,
+  Age INTEGER,
+  Gender TEXT,
+  Points INTEGER,
+  Graduation DATE
+);
+
+INSERT INTO Graduates
+SELECT *, '2000' FROM students
+WHERE name = 'Layal' 
 
 
-SELECT employees.name, employees.Company, companies.Date 
-FROM companies
-INNER JOIN employees ON companies.name = employees.Company
-
-
-SELECT employees.name, employees.Company, companies.Date 
-FROM companies
-INNER JOIN employees ON companies.name = employees.Company
-WHERE companies.Date < 2000
-
-
-SELECT  employees.name, employees.Company, employees.Role, companies.Date 
-FROM companies
-INNER JOIN employees ON companies.name = employees.Company
-WHERE employees.role = 'Graphic Designer'
-
-
-
-
-
-
+DELETE FROM students WHERE name = 'Layal'
 
 
 
