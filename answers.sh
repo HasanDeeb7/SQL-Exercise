@@ -1,33 +1,18 @@
-SELECT * 
+SELECT name, MAX(Points)
 FROM students
 
-SELECT * 
-FROM students 
-WHERE Age > 30
+SELECT AVG(Points)
+FROM students
 
-SELECT name, Age 
-FROM students 
-WHERE Age = 30 AND Gender = 'F'
+SELECT count(*)
+FROM students
+WHERE Points = 500 
 
-INSERT INTO students 
-VALUES (10, 'HDeeb', 22, 'M', 170)
+SELECT name
+FROM students
+WHERE name LIKE '%s%'
 
-UPDATE students
-SET Points = Points + 100
-WHERE name = 'Basma'
-
-UPDATE students
-SET Points = Points - 100
-WHERE name = 'Alex'
-
-
-
-
-
-
-
-
-
-
-
+SELECT name
+FROM students
+ORDER BY Points DESC
 
